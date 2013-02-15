@@ -202,7 +202,11 @@
             <td colspan="2"></td>
         {% } %}
         <td class="delete">
-            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            {% if (file.delete_with_credentials) { %}
+            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}" data-xhr-fields='{"withCredentials":true}'>
+            {% } else { %}
+            <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+            {% } %}
                 <i class="icon-trash icon-white"></i>
                 <span>Delete</span>
             </button>

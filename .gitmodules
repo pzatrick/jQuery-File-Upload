@@ -1,0 +1,3 @@
+[submodule "server/pyramid"]
+	path = server/pyramid
+	url = git://github.com/grooverdan/pyramid-jQuery-File-Upload-demo.git
